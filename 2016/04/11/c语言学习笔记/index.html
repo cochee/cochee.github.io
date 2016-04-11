@@ -5,16 +5,22 @@
     
     <title>c语言学习笔记 | Hexo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description">
+    <meta name="description" content="#memset  
+memset() 函数用来将指定内存的前n个字节设置为特定的值，其原型为：void * memset( void * ptr, int value, size_t num );
+参数说明：ptr 为要操作的内存的指针。value 为要设置的值。你既可以向 value 传递 int 类型的值，也可以传递 char 类型的值，int 和 char 可以根据 ASCII 码相互转换。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="c语言学习笔记">
 <meta property="og:url" content="http://yoursite.com/2016/04/11/c语言学习笔记/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description">
-<meta property="og:updated_time" content="2016-04-11T04:18:17.000Z">
+<meta property="og:description" content="#memset  
+memset() 函数用来将指定内存的前n个字节设置为特定的值，其原型为：void * memset( void * ptr, int value, size_t num );
+参数说明：ptr 为要操作的内存的指针。value 为要设置的值。你既可以向 value 传递 int 类型的值，也可以传递 char 类型的值，int 和 char 可以根据 ASCII 码相互转换。">
+<meta property="og:updated_time" content="2016-04-11T15:36:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="c语言学习笔记">
-<meta name="twitter:description">
+<meta name="twitter:description" content="#memset  
+memset() 函数用来将指定内存的前n个字节设置为特定的值，其原型为：void * memset( void * ptr, int value, size_t num );
+参数说明：ptr 为要操作的内存的指针。value 为要设置的值。你既可以向 value 传递 int 类型的值，也可以传递 char 类型的值，int 和 char 可以根据 ASCII 码相互转换。">
     
 
     
@@ -73,7 +79,7 @@
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Rechercher" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -92,9 +98,9 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Posts',
+            POSTS: 'Articles',
             PAGES: 'Pages',
-            CATEGORIES: 'Categories',
+            CATEGORIES: 'Catégories',
             TAGS: 'Tags',
             UNTITLED: '(Untitled)',
         },
@@ -126,7 +132,7 @@
                 <td>
                     
     <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Rechercher" />
     </div>
 
                 </td>
@@ -146,16 +152,16 @@
             <h2 id="name">Cochee</h2>
             <h3 id="title">Android Developer</h3>
             <span id="location"><i class="fa fa-map-marker"></i>ShangHai, China</span>
-            <a id="follow" target="_blank" href="https://github.com/cochee/">FOLLOW</a>
+            <a id="follow" target="_blank" href="https://github.com/cochee/">SUIVRE</a>
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                3
-                <span>posts</span>
+                4
+                <span>Articles</span>
             </div>
             <div class="article-info-block">
                 0
-                <span>tag</span>
+                <span>Tag</span>
             </div>
         </div>
         
@@ -212,7 +218,17 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            
+            <p>#memset  </p>
+<p>memset() 函数用来将指定内存的前n个字节设置为特定的值，其原型为：<br><code>void * memset( void * ptr, int value, size_t num );</code></p>
+<p>参数说明：<br>ptr 为要操作的内存的指针。<br>value 为要设置的值。你既可以向 value 传递 int 类型的值，也可以传递 char 类型的值，int 和 char 可以根据 ASCII 码相互转换。<br>num 为 ptr 的前 num 个字节，size_t 就是unsigned int。</p>
+<p>【函数说明】memset() 会将 ptr 所指的内存区域的前 num 个字节的值都设置为 value，然后返回指向 ptr 的指针。</p>
+<p>memset() 可以将一段内存空间全部设置为特定的值，所以经常用来初始化字符数组。例如：</p>
+<pre><code class="c"><span class="keyword">char</span> str[<span class="number">20</span>];
+<span class="built_in">memset</span>(str, <span class="string">'\0'</span>, <span class="keyword">sizeof</span>(str)<span class="number">-1</span>);
+</code></pre>
+<p>【返回值】返回指向 ptr 的指针。</p>
+<p>注意：参数 value 虽声明为 int，但必须是 unsigned char，所以范围在0 到255 之间。</p>
+
         
         </div>
         <footer class="article-footer">
@@ -222,7 +238,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/04/11/c语言学习笔记/" data-id="cimvjw9m50001fwyswlvo4ua6" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2016/04/11/c语言学习笔记/" data-id="cimw5xoga0000pkysdamptr1v" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -290,7 +306,7 @@
 
             
     
-        <a href="/2016/04/11/c语言学习笔记/#comments" class="article-comment-link ds-thread-count" data-thread-key="2016/04/11/c语言学习笔记/">Comments</a>
+        <a href="/2016/04/11/c语言学习笔记/#comments" class="article-comment-link ds-thread-count" data-thread-key="2016/04/11/c语言学习笔记/">Commentaires</a>
     
 
         </footer>
@@ -299,9 +315,18 @@
         
 <nav id="article-nav">
     
+        <a href="/2016/04/11/Java动态代理/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Plus récent</strong>
+            <div class="article-nav-title">
+                
+                    Java动态代理
+                
+            </div>
+        </a>
+    
     
         <a href="/2016/04/10/helloworld/" id="article-nav-older" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Older</strong>
+            <strong class="article-nav-caption">Plus ancien</strong>
             <div class="article-nav-title">helloworld</div>
         </a>
     
@@ -364,9 +389,27 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">recent</h3>
+        <h3 class="widget-title">Récents</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/04/11/Java动态代理/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2016/04/11/Java动态代理/" class="title">Java动态代理</a></p>
+                            <p class="item-date"><time datetime="2016-04-11T15:36:46.000Z" itemprop="datePublished">2016-04-11</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -431,9 +474,9 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">archives</h3>
+        <h3 class="widget-title">Archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">3</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">4</span></li></ul>
         </div>
     </div>
 
@@ -444,7 +487,7 @@
     
         
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">links</h3>
+        <h3 class="widget-title">Liens</h3>
         <div class="widget">
             <ul>
                 
